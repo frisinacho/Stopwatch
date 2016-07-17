@@ -30,6 +30,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func reset(sender: AnyObject) {
+        timer.invalidate()
+        time = 0
+        timerLabel.text = "0"
     }
     
     override func viewDidLoad() {
