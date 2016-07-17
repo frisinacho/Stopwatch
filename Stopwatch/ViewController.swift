@@ -9,10 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var timer = NSTimer()
 
     @IBOutlet var timerLabel: UILabel!
     
+    func increaseTimer() {
+    }
+    
     @IBAction func play(sender: AnyObject) {
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("increaseTimer"), userInfo: nil, repeats: true)
     }
     
     @IBAction func pause(sender: AnyObject) {
